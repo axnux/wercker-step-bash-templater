@@ -1,5 +1,5 @@
 name: bash-templater
-version: 0.1.1
+version: 0.1.2
 description: Process template file using environment vars
 keywords:
 - bash
@@ -18,5 +18,5 @@ properties:
     required: false
   version:
     type: string
-    default: "0.1.1"
+    default: "0.1.2"
     required: false

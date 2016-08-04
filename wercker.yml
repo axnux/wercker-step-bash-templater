@@ -7,7 +7,7 @@ build:
     - script:
         name: test run.sh
         code: |
-          export WERCKER_BASH_TEMPLATER_VERSION=0.1.1
+          export WERCKER_BASH_TEMPLATER_VERSION=0.1.2
           export WERCKER_BASH_TEMPLATER_TEMPLATE=example-input.yml
           export WERCKER_BASH_TEMPLATER_OUTPUT=example-output.yml
           export WERCKER_BASH_TEMPLATER_PARAMETERS="HEADER_LABEL=hello SUBTITLE_LABEL=world"
