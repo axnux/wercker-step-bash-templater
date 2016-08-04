@@ -20,7 +20,11 @@ fail() {
 
 download() {
   version="$WERCKER_BASH_TEMPLATER_VERSION"
-  curl --fail --location --silent "https://github.com/axnux/bash-templater/archive/$version.tar.gz" | tar -xzf templater.sh
+  curl -O --fail --location --silent "https://github.com/axnux/bash-templater/archive/v$version.tar.gz" | tar -xzf bash-templater-$version/templater.sh
+  tar -xzf v$version.tar.gz bash-templater-$version/templater.sh
+  mv bash-templater-$version/templater.sh ./
+  rm -rf bash-templater-$version v$version.tar.gz
+    
   chmod +x templater.sh
 }
 
