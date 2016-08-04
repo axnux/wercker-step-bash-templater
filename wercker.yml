@@ -1,0 +1,21 @@
+box: wercker/default
+
+build:
+  steps:
+    - shellcheck:
+        files: run.sh
+    - script:
+        name: test run.sh
+        code: |
+          export WERCKER_BASH_TEMPLATER_VERSION=0.1.0
+          export WERCKER_BASH_TEMPLATER_TEMPLATE=example-input.yml
+          export WERCKER_BASH_TEMPLATER_OUTPUT=example-output.yml
+          export WERCKER_BASH_TEMPLATER_PARAMETERS="HEADER_LABEL=hello SUBTITLE_LABEL=world"
+
+          $WERCKER_ROOT/run.sh
+
+          grep -q 'hello' example-output.yml       || fail "invalid parameter value"
+          grep -q 'world' example-output.yml       || fail "invalid parameter value"
+    - script:
+        name: prepare output
+        code: rm -rf $WERCKER_ROOT/{.git,example-output.yml}

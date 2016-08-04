@@ -1,0 +1,22 @@
+name: bash-templater
+version: 0.1.0
+description: Process template file using environment vars
+keywords:
+- bash
+- templater
+- templates
+properties:
+  template:
+    type: string
+    required: true
+  output:
+    type: string
+    default: bash_templater_output.txt
+    required: true
+  parameters:
+    type: string
+    required: false
+  version:
+    type: string
+    default: "0.1.0"
+    required: false
