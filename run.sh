@@ -8,7 +8,8 @@ main() {
 
   download
 
-  $WERCKER_BASH_TEMPLATER_PARAMETERS ./templater.sh "$WERCKER_BASH_TEMPLATER_TEMPLATE" > "$WERCKER_BASH_TEMPLATER_OUTPUT"
+  export $WERCKER_BASH_TEMPLATER_PARAMETERS
+  ./templater.sh "$WERCKER_BASH_TEMPLATER_TEMPLATE" > "$WERCKER_BASH_TEMPLATER_OUTPUT"
 
   rm templater.sh
 }
@@ -20,12 +21,12 @@ fail() {
 
 download() {
   version="$WERCKER_BASH_TEMPLATER_VERSION"
-  curl -O --fail --location --silent "https://github.com/axnux/bash-templater/archive/v$version.tar.gz" | tar -xzf bash-templater-$version/templater.sh
-  tar -xzf v$version.tar.gz bash-templater-$version/templater.sh
-  mv bash-templater-$version/templater.sh ./
-  rm -rf bash-templater-$version v$version.tar.gz
-    
-  chmod +x templater.sh
+  curl -O --fail --location --silent "https://github.com/axnux/bash-templater/archive/v$version.tar.gz"
+  tar -xzf "v$version.tar.gz" "bash-templater-$version/templater.sh"
+  mv "bash-templater-$version/templater.sh" ./
+  rm -rf "bash-templater-$version" "v$version.tar.gz"
+
+  chmod +x "templater.sh"
 }
 
 main
