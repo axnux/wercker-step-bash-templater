@@ -2,8 +2,6 @@
 #shellcheck disable=2086,2089,SC2090
 
 main() {
-  args=""
-
   if [ ! -e "$WERCKER_BASH_TEMPLATER_TEMPLATE" ]; then
     fail "template not found \"$WERCKER_BASH_TEMPLATER_TEMPLATE\""
   fi
