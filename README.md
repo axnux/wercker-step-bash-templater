@@ -1,6 +1,6 @@
 # General template processing using bash [![wercker status](https://app.wercker.com/status/fbc2981bc179f537be1fe5ff4a0b4e12/s "wercker status")](https://app.wercker.com/project/bykey/fbc2981bc179f537be1fe5ff4a0b4e12)
 
-This step uses script from [BASH templater](https://github.com/johanhaleby/bash-templater) to parse template parameters using `{{VAR}}` by $VAR environment values.  
+This step uses script from [BASH templater](https://github.com/axnux/bash-templater) to parse template parameters using `{{VAR}}` by $VAR environment values.  
 It supports **default** value for template parameters via `{{VAR=this_will_be_default_value}}`
 
 ## Example
