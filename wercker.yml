@@ -18,4 +18,5 @@ build:
           grep -q "world" example-output.yml       || fail "invalid parameter value"
     - script:
         name: prepare output
-        code: rm -rf $WERCKER_ROOT/{.git,example-output.yml}
+        code: |
+          mv "$WERCKER_ROOT/run.sh" "WERCKER_OUTPUT_DIR/run.sh"

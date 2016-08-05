@@ -8,7 +8,7 @@ It supports **default** value for template parameters via `{{VAR=this_will_be_de
 ```yml
 deploy:
   steps:
-  - axnux/bash-templater:
+  - xun91/bash-templater:
     template: example-input.yml
     output: example-output.yml   
     # your template parameter goes here
