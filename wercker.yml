@@ -21,3 +21,4 @@ build:
         code: |
           mv "$WERCKER_ROOT/wercker-step.yml" "$WERCKER_OUTPUT_DIR/wercker-step.yml"
           mv "$WERCKER_ROOT/run.sh" "$WERCKER_OUTPUT_DIR/run.sh"
+          mv "$WERCKER_ROOT/templater.sh" "$WERCKER_OUTPUT_DIR/templater.sh"
