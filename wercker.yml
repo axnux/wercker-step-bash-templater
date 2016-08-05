@@ -19,4 +19,4 @@ build:
     - script:
         name: prepare output
         code: |
-          mv "$WERCKER_ROOT/run.sh" "WERCKER_OUTPUT_DIR/run.sh"
+          mv "$WERCKER_ROOT/run.sh" "$WERCKER_OUTPUT_DIR/run.sh"
